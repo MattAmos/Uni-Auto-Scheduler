@@ -2,9 +2,9 @@ from lxml import html
 from collections import namedtuple
 import requests
 import numpy as np
+import pyjs
 
 timetable = [["" for x in range(12)] for y in range(5)]
-
 Component = namedtuple("Component", "course type day startTime endTime multiplicity")
 
 def getHour(s, change):
@@ -80,7 +80,7 @@ def typeGrouping(course, set, s):
 	for comp in course:
 		if comp.type == s:
 			for i in range(comp.startTime - 8, comp.endTime - 8):
-				print i
+				# print i
 				element = timetable[getDay(comp.day)][i]
 				if element is not "" and element.course == comp.course:
 					element = Component(element.course, element.type, element.day, element.startTime, element.endTime, element.multiplicity + 1)

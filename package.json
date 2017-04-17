@@ -1,0 +1,16 @@
+{
+	"name"			: "uni-auto-scheduler",
+	"version"		: "0.0.1",
+	"description"	: "Simple html scraping and filtering web-based program to create university schedules",
+	"main"			: "server.js",
+	"author"		: "MattAmos",
+	"repository"	: {
+		"type"	: "git",
+		"url"	: "https://github.com/MattAmos/Uni-Auto-Scheduler.git"
+	},
+	"dependencies"	:	{
+		"express"	:	"latest",
+		"request"	:	"latest",
+		"cheerio"	:	"latest"
+	}
+}
